@@ -168,7 +168,19 @@ public class CustomViewPagerIndicator extends HorizontalScrollView implements Pa
         view.setTag(INDEX_TAG, index);
         view.setOnClickListener(mTabClickListener);
 
-        mTabLayout.addView(view, new LinearLayout.LayoutParams(0, MATCH_PARENT, 1));
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        LinearLayout.LayoutParams linParams;
+        if(params!=null){
+            linParams = new LinearLayout.LayoutParams(params.width, params.height);
+            if(params.width<=1){
+                linParams.width = 0;
+            }
+            linParams.weight = 1;
+        } else{
+            linParams = new LinearLayout.LayoutParams(0, MATCH_PARENT, 1);
+        }
+
+        mTabLayout.addView(view,linParams);
     }
 
     @Override
