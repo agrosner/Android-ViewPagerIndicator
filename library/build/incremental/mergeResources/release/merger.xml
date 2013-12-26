@@ -2008,13 +2008,13 @@ false
                     name="TextAppearance.AppCompat.Widget.ActionBar.Menu"
                     parent="TextAppearance.AppCompat.Widget.Base.ActionBar.Menu" />
 
-                <item
-                    name="action_menu_divider"
-                    type="id"/>
-
                 <style
                     name="TextAppearance.AppCompat.Widget.ActionMode.Title.Inverse"
                     parent="TextAppearance.AppCompat.Widget.Base.ActionMode.Title.Inverse" />
+
+                <item
+                    name="action_menu_divider"
+                    type="id"/>
 
                 <style
                     name="Theme.AppCompat.Light"
@@ -2732,14 +2732,15 @@ true
                     <!-- Whether the items are enabled. -->
                     <attr name="android:enabled" />
                 </declare-styleable>
-                <declare-styleable name="ActionMenuView" >
-
-                    <!-- Size of padding on either end of a divider. -->
-                </declare-styleable>
 
                 <attr
                     name="textColorSearchUrl"
                     format="reference|color" />
+
+                <declare-styleable name="ActionMenuView" >
+
+                    <!-- Size of padding on either end of a divider. -->
+                </declare-styleable>
 
                 <style
                     name="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small"

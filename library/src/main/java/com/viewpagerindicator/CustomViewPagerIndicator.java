@@ -74,13 +74,13 @@ public class CustomViewPagerIndicator extends HorizontalScrollView implements Pa
         }
     };
 
-    private final LinearLayout mTabLayout;
+    protected final LinearLayout mTabLayout;
 
     private ViewPager mViewPager;
-    private ViewPager.OnPageChangeListener mListener;
+    protected ViewPager.OnPageChangeListener mListener;
 
     private int mMaxTabWidth;
-    private int mSelectedTabIndex;
+    protected int mSelectedTabIndex;
 
     private OnTabReselectedListener mTabReselectedListener;
 
@@ -131,7 +131,7 @@ public class CustomViewPagerIndicator extends HorizontalScrollView implements Pa
         }
     }
 
-    private void animateToTab(final int position) {
+    protected void animateToTab(final int position) {
         final View tabView = mTabLayout.getChildAt(position);
         if (mTabSelector != null) {
             removeCallbacks(mTabSelector);
